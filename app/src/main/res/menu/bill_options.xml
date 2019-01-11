@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bill"
+        android:title="Bills" android:icon="@drawable/ic_bills_24dp"/>
+    <item android:id="@+id/history"
+        android:title="History" android:icon="@drawable/ic_payment_history_24dp"/>
+    <item android:id="@+id/pay"
+        android:title="Payment" android:icon="@drawable/ic_payment_24dp"/>
+    <item android:id="@+id/payhistory"
+        android:title="Subscription" android:icon="@drawable/ic_account_balance_black_24dp"/>
+    <!--<item android:id="@+id/assign_not"-->
+    <!--android:title="@string/assign_not" android:icon="@drawable/ic_assignment_late_black_24dp"/>-->
+</menu>

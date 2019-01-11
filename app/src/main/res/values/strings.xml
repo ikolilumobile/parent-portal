@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Parents Portal</string>
+    <string name="title_activity_welcome">Welcome Activity</string>
+    <string name="copyright">Ikolilu Co.</string>
+    <string name="IkoliluPrefs">IkoliluPrefs</string>
+    <string name="login_btn">LOGIN</string>
+    <string name="register_btn">REGISTER</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password_hint">Password</string>
+    <string name="forget_pass">Forgot password?</string>
+    <string name="fullname">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="logout">Logout</string>
+    <string name="exit_app">Exit App</string>
+    <string name="setup">Setup</string>
+    <string name="explore_app">Explore App</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="learn_how_to_use_the_app">Learn how to use the app</string>
+    <string name="get_started">Get Started</string>
+    <string name="application_setup">Application Setup</string>
+
+    <string name="welcome_activity">Ikolilu Parent Portal</string>
+    <string name="dashmenu_activity">Dashboard</string>
+
+    <!-- Menu Item Strings -->
+    <string name="ward">My Ward</string>
+    <string name="notice">Notice Board</string>
+    <string name="rececipt_not">Receipt Notice</string>
+    <string name="assign_not">Assignment Notice</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="aca_info">ACADEMIC INFORMATION</string>
+    <string name="billing_pay">BILLING &amp; PAYMENTS</string>
+    <string name="ward_school_info">WARD SCHOOL INFO</string>
+
+    <string-array name="verify_array">
+        <item>Phone number</item>
+        <item>email</item>
+    </string-array>
+
+    <!-- Addresses -->
+    <!-- Method: GET -->
+    <string name="getStudentClass">https://www.ikolilu.com/api/v1.0/portal.php/GetStudentClass/?</string>
+    <string name="getExamType">https://www.ikolilu.com/api/v1.0/portal.php/GetExamType/?</string>
+    <string name="getAcademicInfo">https://www.ikolilu.com/api/v1.0/portal.php/GetMyWardGradesInformation/?</string>
+    <string name="getBillPaymentInfo">https://www.ikolilu.com/api/v1.0/portal.php/GetMyWardBillsAndPayments/?</string>
+    <string name="listSchools">https://www.ikolilu.com/api/v1.0/portal.php/ListSchools/</string>
+    <string name="FindMyWards">https://www.ikolilu.com/api/v1.0/portal.php/FindMyWards/?</string>
+    <string name="ward_daily_activy">Ward Daily Activity</string>
+
+</resources>

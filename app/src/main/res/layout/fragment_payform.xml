@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="Please enter your payment details below for this transaction."/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/billLabel"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Bill item"/>
+        <EditText
+            android:layout_below="@+id/billLabel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/bill_item"
+            android:hint="Fee payment"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/colorAccent"
+            android:textColorHint="@android:color/holo_green_dark"/>
+
+        <TextView
+            android:id="@+id/AmountLabel"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:layout_below="@+id/bill_item"
+            android:layout_marginTop="10dp"
+            android:text="Amount"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="0.00"
+            android:id="@+id/bill_amount"
+            android:layout_below="@id/AmountLabel"
+            android:inputType="number"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorLink="@color/colorAccent"
+            android:textColorHint="@android:color/holo_green_dark"/>
+
+        <TextView
+            android:id="@+id/PayLabel"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Payment method"
+            android:layout_below="@+id/bill_amount"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/bill_method"
+            android:layout_below="@id/PayLabel"
+            />
+
+        <TextView
+            android:id="@+id/PhoneLabel"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Mobile-Money Number"
+            android:layout_below="@+id/bill_method"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="(05X) 000 0000"
+            android:id="@+id/mmphone"
+            android:inputType="number"
+            android:layout_below="@id/PhoneLabel"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorLink="@color/colorAccent"
+            android:textColorHint="@android:color/holo_green_dark"/>
+
+        <TextView
+            android:id="@+id/cardNoLabel"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Card No"
+            android:layout_below="@+id/mmphone"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="xxxx xxxx xxxx xxx"
+            android:id="@+id/cardNo"
+            android:inputType="number"
+            android:layout_below="@id/cardNoLabel"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorLink="@color/colorAccent"
+            android:textColorHint="@android:color/holo_green_dark"/>
+
+        <TextView
+            android:id="@+id/expirationDate"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Expiration Date"
+            android:layout_below="@+id/cardNo"/>
+        <LinearLayout
+            android:id="@+id/expbox"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/expirationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/exp_month"/>
+
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/exp_year"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sendbtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Make Payment"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/expbox"
+            android:gravity="center" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

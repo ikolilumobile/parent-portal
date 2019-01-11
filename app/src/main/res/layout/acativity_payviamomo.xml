@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="15dp">
+
+    <TextView
+        android:id="@+id/notice_txt"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="Do you want to make this payment?"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/notice_txt"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="e.g (05X) 0000 000"/>
+
+    <EditText
+        android:id="@+id/momo_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:hint="0.00"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorLink="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"/>
+
+    <EditText
+        android:id="@+id/momo_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:hint="(024)"
+        android:layout_below="@+id/momo_amount"
+        android:textColor="@color/colorAccent"
+        android:textColorLink="@color/colorAccent"
+        android:textColorHint="@android:color/holo_green_dark"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/pay_now"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@drawable/round_thick_rect"-->
+        <!--android:text="PAY NOW"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_below="@id/momo_phone"/>-->
+</RelativeLayout>

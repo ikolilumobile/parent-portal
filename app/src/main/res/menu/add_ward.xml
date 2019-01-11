@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ikolilu.ikolilu.portal.ui.dashboardFragments.actions.AddWard">
+
+    <item
+        android:id="@+id/add_ward"
+        android:title="Save Ward"
+        app:showAsAction="always" />
+
+</menu>

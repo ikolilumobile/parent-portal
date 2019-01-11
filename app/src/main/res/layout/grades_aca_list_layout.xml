@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true" >
+
+        <RelativeLayout
+            android:id="@+id/aca_grade_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rect_straight"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:text="Mathematics"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subject"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:text="Class Score"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/es"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subject"
+                android:layout_toRightOf="@+id/cs"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:text="Exam Score"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/total"
+                android:text="Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/subject"
+                android:layout_toRightOf="@+id/es"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="22dp"/>
+
+
+            <TextView
+                android:id="@+id/pos"
+                android:text="Position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/subject"
+                android:layout_toRightOf="@+id/total"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="22dp"/>
+
+
+
+            <TextView
+                android:id="@+id/comment"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="0sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/cs_con"
+
+                android:layout_marginTop="10dp"
+                />
+
+
+
+            <!--Values -->
+            <TextView
+                android:id="@+id/cs_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cs"
+
+                android:layout_marginTop="5dp"
+                android:text="56.0"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/es_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/es"
+                android:layout_toRightOf="@+id/cs"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="25dp"
+                android:text="64.3"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/total_con"
+                android:text="77.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:layout_below="@+id/total"
+                android:layout_toRightOf="@+id/es"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:id="@+id/pos_con"
+                android:text="56.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:layout_below="@+id/pos"
+                android:layout_toRightOf="@+id/total"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="22dp"/>
+
+
+            <TextView
+                android:id="@+id/comment_con"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="0sp"
+                android:layout_below="@+id/comment"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="0dp"/>
+
+            <TextView
+                android:id="@+id/grade"
+                android:text="Grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/comment_con"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="0dp"/>
+
+            <TextView
+                android:id="@+id/grade_con"
+                android:text="A*"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:layout_below="@+id/comment_con"
+                android:layout_toRightOf="@+id/comment_con"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

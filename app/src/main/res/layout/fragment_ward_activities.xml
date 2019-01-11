@@ -1,0 +1,113 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.WardActivitiesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:id="@+id/main_blog_post1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/c_image"
+                        android:layout_width="match_parent"
+                        android:importantForAutofill="yes"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/under_con" />
+
+                    <TextView
+                        android:id="@+id/f_para"
+                        android:layout_below="@id/c_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:typeface="normal"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:text="This blog page will be a summary of your wards school activities for each day." />
+
+                    <TextView
+                        android:id="@+id/s_param"
+                        android:layout_below="@+id/f_para"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:text="Information that could be viewed will include the following parameters:"
+                        />
+
+                    <TextView
+                        android:id="@+id/t_param"
+                        android:layout_below="@+id/s_param"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:text="(1) Some class pictures."
+                        />
+                    <TextView
+                        android:id="@+id/f_param"
+                        android:layout_below="@+id/t_param"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:text="(2) Time of Event e.g Lunch, Swimming or any other activities."
+                        />
+
+
+                    <TextView
+                        android:id="@+id/fv_param"
+                        android:layout_below="@+id/f_param"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:text="(3) Emergency Events e.g Illness, etc."
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/other_evt"
+                        android:layout_below="@id/fv_param"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:text="(4) Other events for Pre-school e.g Sleeping, Napping, etc."/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>

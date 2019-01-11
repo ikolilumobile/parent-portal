@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="school_term_array">
+        <item>1ST</item>
+        <item>2ND</item>
+        <item>3RD</item>
+    </string-array>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/classicon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:labelFor="@+id/w_class"
+            android:layout_marginTop="10dp"
+            android:text="Class:"/>
+        <Spinner
+            android:id="@+id/w_class"
+            android:layout_toRightOf="@+id/classicon"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/term_board"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/classicon"
+            android:text="Term:"/>
+
+
+        <Spinner
+            android:id="@+id/w_term"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/term_board"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/w_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/acca_grade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchat"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+    </com.github.mikephil.charting.charts.BarChart>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/term_bill_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rect_straight"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/bill_item"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Sanitary Dues"
+                android:textColor="@color/darkblue"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/subscribe_btn"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/bill_item"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/cashing"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bill_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/subscribe_btn"
+                android:gravity="end"
+                android:text="20.00 "
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

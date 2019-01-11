@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="school_array">
+        <item>Galaxy International School</item>
+        <item>British International School</item>
+        <item>Mystical Rose International School</item>
+        <item>McCathy Hills International School</item>
+    </string-array>
+</resources>

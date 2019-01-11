@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/selectSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:text="Select Class" />
+
+            <ImageView
+                android:id="@+id/classicon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/selectSchool"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/classes" />
+
+            <Spinner
+                android:id="@+id/class_pot"
+
+                android:layout_alignTop="@+id/classicon"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:theme="@style/Theme.AppCompat" />
+
+            <TextView
+                android:id="@+id/selectTerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/class_pot"
+                android:text="Select Term" />
+
+            <ImageView
+                android:id="@+id/termicon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/selectTerm"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/term" />
+            <Spinner
+                android:id="@+id/term_pot"
+
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/selectTerm" />
+
+            <TextView
+                android:id="@+id/selectExam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/term_pot"
+                android:text="Select Exam Type" />
+
+            <ImageView
+                android:id="@+id/examicon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/selectExam"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/exam2" />
+
+            <Spinner
+                android:id="@+id/exam_pot"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/selectExam"/>
+
+
+            <Button
+                android:id="@+id/seach"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/exam_pot"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/round_thick_rect"
+                android:text="search"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

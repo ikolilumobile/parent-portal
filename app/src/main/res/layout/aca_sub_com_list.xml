@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/aca_sub_comment_box"
+            android:background="@drawable/rect_straight2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:background="@color/green"
+                android:id="@+id/subject"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:text="MATHEMATICS"/>
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_below="@id/subject"
+                android:text="Total Score: 167.04"/>
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total"
+                android:layout_marginTop="5dp"
+                android:textAlignment="inherit"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."/>
+
+            <TextView
+                android:id="@+id/teacher_name"
+                android:layout_below="@id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="MR. CHIZOTA V."
+                android:gravity="end"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/school_name"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

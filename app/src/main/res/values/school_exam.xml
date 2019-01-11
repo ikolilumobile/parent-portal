@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="school_exam_array">
+        <item>MID TERM</item>
+        <item>TERMINAL</item>
+    </string-array>
+</resources>

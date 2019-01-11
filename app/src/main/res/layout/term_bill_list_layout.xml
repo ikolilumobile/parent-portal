@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<android.support.v7.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<RelativeLayout
+android:id="@+id/term_bill_box"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@drawable/rect_straight"
+android:padding="10dp">
+
+<TextView
+android:id="@+id/pay"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginLeft="5sp"
+
+android:text="BANK PAYMENT"
+android:textSize="18sp"
+android:textStyle="bold" />
+
+<TextView
+android:id="@+id/cur"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignLeft="@+id/debit"
+android:layout_alignParentTop="true"
+android:layout_alignStart="@+id/debit"
+android:text="GHC "
+android:textSize="18sp"
+android:textStyle="bold" />
+
+<TextView
+android:id="@+id/bill_item"
+android:layout_width="255dp"
+android:layout_height="wrap_content"
+android:layout_below="@id/pay"
+android:layout_marginLeft="5dp"
+android:layout_marginTop="5dp"
+android:text="FIRST TERM SCHOOL FEES" />
+
+<TextView
+android:id="@+id/date"
+android:layout_width="match_parent"
+android:layout_height="30dp"
+android:layout_below="@id/pay"
+android:layout_marginTop="5dp"
+android:layout_toRightOf="@+id/school_name"
+android:gravity="end"
+android:text="21/02/2018" />
+
+<TextView
+android:id="@+id/credit"
+android:layout_width="100dp"
+android:layout_height="wrap_content"
+android:layout_below="@+id/bill_item"
+android:layout_marginLeft="5dp"
+android:text="250.75"
+android:textColor="@android:color/holo_green_light" />
+
+<TextView
+android:layout_width="100dp"
+android:layout_height="wrap_content"
+android:layout_below="@id/bill_item"
+android:layout_marginLeft="5dp"
+android:layout_toRightOf="@id/bill_item"
+android:text="-750.20"
+android:textColor="@android:color/holo_red_light"
+android:id="@+id/debit" />
+</RelativeLayout>
+</android.support.v7.widget.CardView>
+</LinearLayout>

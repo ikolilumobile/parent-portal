@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    tools:context="com.ikolilu.ikolilu.portal.ui.wardService.wardOptions.exploreEngine.ExploreAcademicActivity">
+
+    <TextView
+        android:id="@+id/selectSchool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:text="Select Class" />
+
+    <Spinner
+        android:id="@+id/class_pot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/selectSchool" />
+
+    <TextView
+        android:id="@+id/selectTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/class_pot"
+        android:text="Select Term" />
+
+    <Spinner
+        android:id="@+id/term_pot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/selectTerm" />
+
+
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/term_pot"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/round_thick_rect"
+        android:text="search"
+        android:textColor="@color/colorWhite"/>
+</RelativeLayout>

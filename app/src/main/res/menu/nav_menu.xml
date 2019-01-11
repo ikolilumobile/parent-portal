@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/ward"
+        android:title="@string/ward" android:icon="@drawable/ic_ward_circle_black_24dp"/>
+    <item android:id="@+id/notice_board"
+        android:title="@string/notice" android:icon="@drawable/ic_notifications_active_black_24dp"/>
+    <item android:id="@+id/ward_activities"
+        android:title="@string/ward_daily_activy" android:icon="@drawable/ic_ward_activity_24dp"/>
+    <!--<item android:id="@+id/receipt_not"-->
+        <!--android:title="@string/rececipt_not" android:icon="@drawable/ic_receipt_black_24dp"/>-->
+    <!--<item android:id="@+id/assign_not"-->
+        <!--android:title="@string/assign_not" android:icon="@drawable/ic_assignment_late_black_24dp"/>-->
+</menu>

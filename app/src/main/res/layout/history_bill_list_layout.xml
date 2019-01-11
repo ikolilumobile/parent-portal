@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/history_bill_box"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/rect_straight"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/date"
+                android:layout_alignBottom="@+id/date"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="I.C.T Fees" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="21/02/2018" />
+
+            <TextView
+                android:id="@+id/bill"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/paidIn"
+                android:layout_alignStart="@+id/paidIn"
+                android:layout_below="@+id/date"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:text="BILL:"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/holo_green_light" />
+
+            <TextView
+                android:id="@+id/paidIn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/credit"
+                android:layout_alignBottom="@+id/credit"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:text="PAID:"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/holo_green_light"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bill_cost"
+                android:layout_width="100dp"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/date"
+                android:gravity="end"
+                android:text="Bill Cost"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/holo_green_light" />
+
+            <TextView
+                android:id="@+id/credit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cur"
+                android:layout_alignEnd="@+id/cur"
+                android:layout_alignRight="@+id/cur"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="11dp"
+                android:gravity="end"
+                android:text="250.75"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/holo_green_light" />
+
+            <TextView
+                android:id="@+id/debit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/total_amount"
+                android:layout_centerHorizontal="true"
+                android:gravity="end"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/holo_red_light" />
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="BALANCE:"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/cur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/total_amount"
+                android:text="1000.95"
+                android:textColor="@android:color/holo_orange_light" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

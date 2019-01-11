@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.AcademicInfoOptionActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--app:tabMode="fixed"-->
+        <!--app:tabGravity="fill"-->
+        <!--app:tabTextColor="@color/colorWhite"-->
+        <!--app:tabSelectedTextColor="@color/yello"-->
+        <!--app:tabIndicatorColor="@color/yello"-->
+        <!--android:id="@+id/acaTabLayout_id">-->
+
+    <!--</android.support.design.widget.TabLayout>-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/aca_options"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="3dp"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        android:background="@color/colorAccent"
+        app:menu="@menu/aca_options"></android.support.design.widget.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/aca_options"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></FrameLayout>
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/viewpager_id"></android.support.v4.view.ViewPager>-->
+    </RelativeLayout>
+</LinearLayout>

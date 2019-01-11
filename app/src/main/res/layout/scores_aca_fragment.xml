@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:gravity="center">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/classicon"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+
+            <!--android:layout_below="@+id/selectSchool"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:src="@drawable/classes" />-->
+        <!--<Spinner-->
+            <!--android:id="@+id/w_class"-->
+            <!--android:layout_toRightOf="@+id/classicon"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/termicon"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_toRightOf="@+id/w_class"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:src="@drawable/term" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/w_term"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toRightOf="@+id/termicon"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textView3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignEnd="@+id/classicon"-->
+            <!--android:layout_alignLeft="@+id/classicon"-->
+            <!--android:layout_alignRight="@+id/classicon"-->
+            <!--android:layout_alignStart="@+id/classicon"-->
+            <!--android:layout_below="@id/classicon"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:text="Class" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBaseline="@+id/textView3"-->
+            <!--android:layout_alignBottom="@+id/textView3"-->
+            <!--android:layout_alignEnd="@+id/termicon"-->
+            <!--android:layout_alignLeft="@+id/termicon"-->
+            <!--android:layout_alignRight="@+id/termicon"-->
+            <!--android:layout_alignStart="@+id/termicon"-->
+            <!--android:text="Term"-->
+            <!--android:textAlignment="center"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/textSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="20dp"
+        android:text="Select subject" />
+
+    <Spinner
+        android:id="@+id/subjectSelect"
+        android:layout_toRightOf="@+id/textSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textSelect"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="29dp" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_below="@+id/subjectSelect"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:id="@+id/score_recycler"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/subjectSelect"
+        android:layout_marginTop="20dp"
+        android:id="@+id/score_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srv_layoutMode="linearVertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

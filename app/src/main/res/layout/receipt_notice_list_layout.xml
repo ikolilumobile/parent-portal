@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true" >
+
+        <RelativeLayout
+            android:id="@+id/receipt_board_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/notice_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_receiptnotice_black_24dp"
+                />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/notice_icon"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:text="SCHOOL FEES RECEIPT"/>
+
+            <TextView
+                android:id="@+id/school_name"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:text="GALAXY INTERNATIONAL SCHOOL"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_below="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="20mins"
+                android:gravity="end"
+                android:layout_toRightOf="@+id/school_name"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
