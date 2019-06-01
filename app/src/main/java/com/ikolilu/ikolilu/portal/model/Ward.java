@@ -14,6 +14,7 @@ public class Ward {
     private String term;
     private String wClass;
     private String schoolId;
+    private String program;
 
     public String getSchoolId() {
         return schoolId;
@@ -22,7 +23,7 @@ public class Ward {
     public void setSchoolId(String schoolId) {
         this.schoolId = schoolId;
     }
-    public Ward(int id, String wardId, String schoolName, String studentName, String image, String term, String wClass) {
+    public Ward(int id, String wardId, String schoolName, String studentName, String image, String term, String wClass, String program) {
         this.id = id;
         this.wardId = wardId;
         this.schoolName = schoolName;
@@ -30,9 +31,10 @@ public class Ward {
         this.image = image;
         this.term = term;
         this.wClass = wClass;
+        this.program = program;
     }
 
-    public Ward(int id, String wardId, String schoolName, String studentName, String image, String term, String wClass, String schoolId) {
+    public Ward(int id, String wardId, String schoolName, String studentName, String image, String term, String wClass, String schoolId, String program) {
         this.id = id;
         this.wardId = wardId;
         this.schoolName = schoolName;
@@ -41,6 +43,15 @@ public class Ward {
         this.term = term;
         this.wClass = wClass;
         this.schoolId = schoolId;
+        this.program = program;
+    }
+
+    public String getProgram() {
+        return program;
+    }
+
+    public void setProgram(String program) {
+        this.program = program;
     }
 
     public Ward(){}

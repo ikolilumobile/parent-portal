@@ -17,14 +17,15 @@
             >
 
             <TextView
-                android:background="@color/green"
                 android:id="@+id/subject"
-                android:layout_width="380dp"
+                android:background="#D1CEAE"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="0dp"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:padding="10dp"
-                android:text="MATHEMATICS"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/total"

@@ -99,6 +99,12 @@ public class FragmentComments extends Fragment {
                         {
                             try {
                                 jsonArrayParser = new JSONArray(object);
+
+//                                if (jsonArrayParser.length() == 0)
+//                                {
+//                                    recyclerView.setBackgroundResource(R.drawable.nothing);
+//                                }
+
                                 for (int i = 0;i < jsonArrayParser.length(); i++){
                                     JSONObject jsonObject = jsonArrayParser.getJSONObject(i);
 

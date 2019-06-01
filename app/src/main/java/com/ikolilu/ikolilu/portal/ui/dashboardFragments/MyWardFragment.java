@@ -187,6 +187,7 @@ public class MyWardFragment extends Fragment {
                                         String schoolName = jsonObject.getString("schoolname");
                                         String schoolId = jsonObject.getString("sz_schoolid");
                                         String studentPhoto = jsonObject.getString("photo_file");
+                                        String szprogram = jsonObject.getString("szprogram");
 
                                         // Dummy
                                         String wardCurTerm = jsonObject.getString("sztermyear");
@@ -209,7 +210,7 @@ public class MyWardFragment extends Fragment {
 
                                         wardDAO.createWard(studentName, studentId, schoolName, schoolId, studentPhoto, wardCurTerm, studentClass);
                                         Ward ward = new Ward(i, studentId, schoolName, studentName,
-                                                studentPhoto, wardCurTerm + "-" +curYear, studentClass, schoolId);
+                                                studentPhoto, wardCurTerm + "-" +curYear, studentClass, schoolId, szprogram);
                                         wardList.add(ward);
 
                                     }
@@ -267,7 +268,8 @@ public class MyWardFragment extends Fragment {
                         mWardList.get(i).getStudentName(),
                         mWardList.get(i).getImage(),
                         mWardList.get(i).getTerm(),
-                        mWardList.get(i).getwClass());
+                        mWardList.get(i).getwClass(),
+                        mWardList.get(i).getProgram());
                 vWardList.add(wardObject);
             }
             adapter = new WardAdapter(getContext(), vWardList);

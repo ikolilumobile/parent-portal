@@ -50,7 +50,7 @@ public class DailyAttendanceAdapter extends RecyclerView.Adapter<DailyAttendance
         return dailyAttendanceList.size();
     }
 
-    class DailyAttendanceViewHolder extends   RecyclerView.ViewHolder {
+    class DailyAttendanceViewHolder extends  RecyclerView.ViewHolder {
 
         TextView date, topic, subject, status, time;
 

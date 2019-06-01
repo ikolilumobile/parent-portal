@@ -8,6 +8,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,7 +76,7 @@ public class NoticeFragment extends Fragment {
 
         if( NetworkUtils.isNetworkConnected(getContext()) ) {
 
-        String  GET_WARD_URL = "https://www.ikolilu.com/api/v1.0/portal.php/GetNotices/?szschoolid="+loadschoolId(); //[{\"szschoolid\":\"MYRSCHOOL\"},{\"szschoolid\":\"BISSCHOOL\"},{\"szschoolid\":\"BCISCHOOL\"}]";pd = new ProgressDialog(getContext());
+            String  GET_WARD_URL = "https://www.ikolilu.com/api/v1.0/portal.php/GetNotices/?szschoolid="+loadschoolId(); //[{\"szschoolid\":\"MYRSCHOOL\"},{\"szschoolid\":\"BISSCHOOL\"},{\"szschoolid\":\"BCISCHOOL\"}]";pd = new ProgressDialog(getContext());
 
             pd.setTitle("Preparing");
             pd.setMessage("Preparing ward list ... Please wait");
@@ -119,10 +120,10 @@ public class NoticeFragment extends Fragment {
 
                             } catch (JSONException e) {
                                 pd.hide();
-                                 e.printStackTrace();
+                                e.printStackTrace();
                                 recyclerView.setBackgroundResource(R.drawable.empty_notice);
                             }
-                         }
+                        }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.ikolilu.ikolilu.portal.R;
 import com.ikolilu.ikolilu.portal.model.WardDailyActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,14 +43,21 @@ public class DailyWardAdapter extends RecyclerView.Adapter<DailyWardAdapter.Dail
     @Override
     public void onBindViewHolder(DailyWardViewHolder holder, int position) {
         WardDailyActivity wardDailyActivity = wardDailyActivities.get(position);
+
         holder.blog_user_name.setText(wardDailyActivity.getTeacherName());
         holder.blog_desc.setText(wardDailyActivity.getDescription());
         holder.blog_date.setText(wardDailyActivity.getDate());
 
-        holder.blog_image.setImageResource(R.drawable.add_ward);
+//        holder.blog_image.setImageResource(R.drawable.add_ward);
 //        /// No Checking ..
-//        Picasso.with(inflater.getContext()).load( "https://www.insidehighered.com/sites/default/server_files/styles/large-copy/public/media/student%20shaming.jpg?itok=oH5df-pC")
-//                .into(holder.blog_image);
+        if(wardDailyActivity.getImage().equals(""))
+        {
+            Picasso.with(inflater.getContext()).load("https://www.insidehighered.com/sites/default/server_files/styles/large-copy/public/media/student%20shaming.jpg?itok=oH5df-pC")
+                    .into(holder.blog_image);
+        } else {
+            Picasso.with(inflater.getContext()).load("https://www.ikolilu.com/schoolactivities/images/"+wardDailyActivity.getImage())
+                    .into(holder.blog_image);
+        }
     }
 
     @Override

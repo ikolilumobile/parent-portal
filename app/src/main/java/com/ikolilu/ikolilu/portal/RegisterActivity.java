@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ikolilu.ikolilu.portal.network.APIRequest;
 import com.ikolilu.ikolilu.portal.network.NetworkUtils;
@@ -53,11 +54,16 @@ public class RegisterActivity extends AppCompatActivity {
                     Snackbar.make(view, "Field Required", Snackbar.LENGTH_SHORT).show();
                 }else{
 
-                    if (NetworkUtils.isNetworkConnected(RegisterActivity.this))
-                    {
-                        APIRequest apiRequest = new APIRequest(RegisterActivity.this);
-                        apiRequest.doRegister(mFullname, mEmail, mPassword, mPhone, RegisterActivity.this);
+                    if(mPhone.length() > 10) {
+                        if (NetworkUtils.isNetworkConnected(RegisterActivity.this))
+                        {
+                            APIRequest apiRequest = new APIRequest(RegisterActivity.this);
+                            apiRequest.doRegister(mFullname, mEmail, mPassword, mPhone, RegisterActivity.this);
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Phone number must be internationlized!", Toast.LENGTH_LONG).show();
                     }
+
                }
             }
         });

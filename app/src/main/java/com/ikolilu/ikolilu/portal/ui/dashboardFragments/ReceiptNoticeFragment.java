@@ -30,6 +30,9 @@ public class ReceiptNoticeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public ReceiptNoticeFragment(String response) {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

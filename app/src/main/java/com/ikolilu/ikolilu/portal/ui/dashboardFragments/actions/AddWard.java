@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -229,10 +230,10 @@ public class AddWard extends AppCompatActivity {
         {
 
             object = new JsonObject();
-            object.addProperty("studentid", selectedStdList.get(i) );
-            object.addProperty("studentname", selectedWardNameList.get(i));
-            object.addProperty("schoolid", selectedSchoolList.get(i));
-            object.addProperty("parentEmail", userEmail);
+            object.addProperty(Uri.encode("studentid"), Uri.encode(selectedStdList.get(i)) );
+            object.addProperty(Uri.encode("studentname"), Uri.encode(selectedWardNameList.get(i)) );
+            object.addProperty(Uri.encode("schoolid"), Uri.encode(selectedSchoolList.get(i)) );
+            object.addProperty(Uri.encode("parentEmail"), Uri.encode(userEmail) );
             Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
 
             if(i ==  selectedSchoolList.size() - 1)
@@ -245,7 +246,7 @@ public class AddWard extends AppCompatActivity {
 
         //Log.i("AddWard", "https://www.ikolilu.com/api/v1.0/portal.php/VerifyParent/?wardInfo=" + wardJsonObject + "&parentEmail="+userEmail);
 
-        postAddWardData("https://www.ikolilu.com/api/v1.0/portal.php/VerifyParent/?", wardJsonObject + "", userEmail);
+        postAddWardData("https://www.ikolilu.com/api/v1.0/portal.php/AddWardsToFile/?wardInfo=" + wardJsonObject, wardJsonObject + "", userEmail);
     }
 
     private String processImageFile(String photo_file) {
@@ -310,7 +311,7 @@ public class AddWard extends AppCompatActivity {
     }
 
 
-    public void postAddWardData(String URL, String wardInfo, String parentEmail){
+    public void postAddWardData(final String URL, String wardInfo, String parentEmail){
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             JSONObject jsonBody = new JSONObject();
@@ -320,11 +321,12 @@ public class AddWard extends AppCompatActivity {
 
             Log.i("LOG_REQ", mRequestBody);
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     //Log.i("LOG_RESPONSE", response);
-                    Toast.makeText(AddWard.this, response, Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddWard.this, "Wards Successfully Added to Account", Toast.LENGTH_LONG).show();
+//                    Log.d("WARD_ADDED", URL);
                     Intent intent = new Intent(AddWard.this, DashMenuActivity.class);
                     startActivity(intent);
                 }

@@ -51,6 +51,8 @@ public class WardInfoActivity extends AppCompatActivity implements AdapterView.O
         wardTerm    = generalPref.getSelectedWardItems("ward_term");
         wardClass   =  generalPref.getSelectedWardItems("ward_class");
 
+        final String wardProgram = generalPref.getSelectedWardItems("ward_program");
+
         this.getSupportActionBar().setTitle(studentName);
 
         acadmicInfo = (CardView) findViewById(R.id.academic_info);
@@ -89,9 +91,15 @@ public class WardInfoActivity extends AppCompatActivity implements AdapterView.O
                     e.printStackTrace();
                 }
 
-                new GradeInfoService(getApplicationContext(),  "sz_wardid=" + wardID + "&szclassid=" + studentClass + "&sz_term=" + term + "&szschoolid=" + schoolCode + "&sz_examtype=" + examType, wardID, schoolCode,
-                        wardClass, wardTerm, "TERMINAL").execute();
-                Toast.makeText(WardInfoActivity.this, "Loading...", Toast.LENGTH_LONG).show();
+                if(wardProgram.equals("PRESCHOOL") || wardProgram.equals("EARLY YEARS"))
+                {
+                    Intent intent = new Intent(getApplicationContext(), PreschoolReport.class);
+                    startActivity(intent);
+                }else {
+                    new GradeInfoService(getApplicationContext(), "sz_wardid=" + wardID + "&szclassid=" + studentClass + "&sz_term=" + term + "&szschoolid=" + schoolCode + "&sz_examtype=" + examType, wardID, schoolCode,
+                            wardClass, wardTerm, "TERMINAL").execute();
+                    Toast.makeText(WardInfoActivity.this, "Loading...", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

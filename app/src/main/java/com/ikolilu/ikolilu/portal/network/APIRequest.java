@@ -4,6 +4,7 @@ package com.ikolilu.ikolilu.portal.network;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -164,14 +165,24 @@ public class APIRequest {
 
         JSONObject jsonObj = new JSONObject(params);
 
-
         progress = new ProgressDialog(context);
         progress.setTitle("Sign Up");
         progress.setMessage("Registering ...");
         progress.show();
 
+        final String phone_number = phone;
+
+
+
+        SharedPreferences verifyData = mCtx.getSharedPreferences("verify_info", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = verifyData.edit();
+        editor.putString("phone", phone_number);
+        editor.putString("name", fullname);
+        editor.putString("email", email);
+        editor.apply();
+
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
-                ROOT + "SignUp", jsonObj, new Response.Listener<JSONObject>() {
+                ROOT + "SignUpMobile", jsonObj, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
@@ -181,7 +192,10 @@ public class APIRequest {
                     if (success) {
                         progress.hide();
                         regSharedPref.setRegSuccessKey(true);
+
+                        // Save the phone
                         intent = new Intent(context, VerifyActivity.class);
+
                         context.startActivity(intent);
 
 

@@ -7,16 +7,17 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.ikolilu.ikolilu.portal.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ikolilu"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ikolilu"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ikolilu.ikolilu.portal.MainActivity" />
+        <activity android:name=".RegVerify"></activity>
+        <activity android:name=".MainActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.WelcomeActivity"
+            android:name=".WelcomeActivity"
             android:theme="@style/App.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,73 +26,79 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ikolilu.ikolilu.portal.LoginActivity"
+            android:name=".LoginActivity"
             android:theme="@style/App.NoActionBar" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.RegisterActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.LoginActivity"
+            android:name=".RegisterActivity"
+            android:parentActivityName=".LoginActivity"
             android:theme="@style/App.NoActionBar" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.WardSetupActivity"
+            android:name=".WardSetupActivity"
             android:theme="@style/App.NoActionBar" />
-        <activity android:name="com.ikolilu.ikolilu.portal.DashboardActivity" />
+        <activity android:name=".DashboardActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.GetStartedActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.DashboardActivity" />
+            android:name=".ui.GetStartedActivity"
+            android:parentActivityName=".DashboardActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.SettingsActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.DashboardActivity" />
+            android:name=".ui.SettingsActivity"
+            android:parentActivityName=".DashboardActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.LogoutActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.DashboardActivity" />
+            android:name=".ui.LogoutActivity"
+            android:parentActivityName=".DashboardActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.DashMenuActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.DashboardActivity" />
+            android:name=".ui.DashMenuActivity"
+            android:parentActivityName=".DashboardActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.dashboardFragments.actions.AddWard"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.DashMenuActivity" />
+            android:name=".ui.dashboardFragments.actions.AddWard"
+            android:parentActivityName=".ui.DashMenuActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.DashMenuActivity" />
+            android:name=".ui.dashboardFragments.ProgramFilter"
+            android:parentActivityName=".ui.DashMenuActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.dashboardFragments.actions.OpenNoticeboardActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.wardService.PreschoolReport"
+            android:parentActivityName=".ui.DashMenuActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.dashboardFragments.actions.OpenAssignmentboardActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.wardService.WardInfoActivity"
+            android:parentActivityName=".ui.DashMenuActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.dashboardFragments.actions.OpenReceiptboardActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.dashboardFragments.actions.OpenNoticeboardActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptions.exploreEngine.ExploreAcademicActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.dashboardFragments.actions.OpenAssignmentboardActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptions.exploreEngine.ExploreBillingPaymentActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.dashboardFragments.actions.OpenReceiptboardActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.AcademicInfoOptionActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.wardService.wardOptions.exploreEngine.ExploreAcademicActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.BillingPaymentsActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
+            android:name=".ui.wardService.wardOptions.exploreEngine.ExploreBillingPaymentActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.WardSchoolActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
-        <activity android:name="com.ikolilu.ikolilu.portal.RegSuccessActivity" />
-        <activity android:name="com.ikolilu.ikolilu.portal.ui.dashboardFragments.actions.WardSuccessActivity" />
-        <activity android:name="com.ikolilu.ikolilu.portal.VerifyActivity" />
+            android:name=".ui.wardService.wardOptionInfo.AcademicInfoOptionActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.PaymentActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.wardOptions.exploreEngine.ExploreBillingPaymentActivity" />
+            android:name=".ui.wardService.wardOptionInfo.BillingPaymentsActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo.WardActivity.WardDailyxActivity"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.wardService.WardInfoActivity" />
-        <activity android:name="com.ikolilu.ikolilu.portal.ui.ResetPasswordActivity" />
+            android:name=".ui.wardService.wardOptionInfo.WardSchoolActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
+        <activity android:name=".RegSuccessActivity" />
+        <activity android:name=".ui.dashboardFragments.actions.WardSuccessActivity" />
+        <activity android:name=".VerifyActivity" />
         <activity
-            android:name="com.ikolilu.ikolilu.portal.ResetPasswordSecond"
-            android:parentActivityName="com.ikolilu.ikolilu.portal.ui.ResetPasswordActivity" />
-        <activity android:name="com.ikolilu.ikolilu.portal.ui.ResetPasswordActivity2" />
-        <activity android:name="com.ikolilu.ikolilu.portal.ui.ResetPasswordSecond2"></activity>
+            android:name=".ui.wardService.wardOptionInfo.PaymentActivity"
+            android:parentActivityName=".ui.wardService.wardOptions.exploreEngine.ExploreBillingPaymentActivity" />
+        <activity
+            android:name=".ui.wardService.wardOptionInfo.WardActivity.WardDailyxActivity"
+            android:parentActivityName=".ui.wardService.WardInfoActivity" />
+        <activity android:name=".ui.ResetPasswordActivity" />
+        <activity
+            android:name=".ResetPasswordSecond"
+            android:parentActivityName=".ui.ResetPasswordActivity" />
+        <activity android:name=".ui.ResetPasswordActivity2" />
+        <activity android:name=".ui.ResetPasswordSecond2" />
     </application>
 
 </manifest>
