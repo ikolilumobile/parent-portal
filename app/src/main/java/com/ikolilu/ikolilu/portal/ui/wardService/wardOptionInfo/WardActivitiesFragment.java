@@ -98,7 +98,7 @@ public class WardActivitiesFragment extends Fragment {
                                             object.getString("sz_studentname"),
                                             object.getString("sz_subject"),
                                             object.getString("sz_comments"),
-                                            object.getString("sz_image"),
+                                            object.getString("sz_schoolid") + "/" + object.getString("sz_image"),
                                             object.getString("sz_date")
                                     );
                                     wardDailyActivities.add(wardDailyActivity);

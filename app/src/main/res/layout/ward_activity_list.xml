@@ -65,6 +65,29 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/blog_image" />
+            <TextView
+                android:id="@+id/blog_date_new"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:text="5-89-2015"
+                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc" />
+            <TextView
+                android:id="@+id/blog_share_btn"
+                android:layout_width="50sp"
+                android:layout_height="45dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:background="@drawable/ic_share_black_24dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:actionProviderClass=
+                    "android.widget.ShareActionProvider"
+
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc" />
 
 
         </android.support.constraint.ConstraintLayout>

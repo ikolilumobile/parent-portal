@@ -5,11 +5,11 @@ android {
     compileSdkVersion 26
     defaultConfig {
         multiDexEnabled true
-        applicationId "com.ikolilu.ikolilu.portal"
+        applicationId "com.ikolilu.ikolilu.parents.portal"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 2
-        versionName "2.0"
+        versionCode 7
+        versionName "7.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
