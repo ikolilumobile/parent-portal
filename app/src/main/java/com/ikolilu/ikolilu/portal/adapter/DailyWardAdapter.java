@@ -52,7 +52,7 @@ public class DailyWardAdapter extends RecyclerView.Adapter<DailyWardAdapter.Dail
 
         holder.blog_user_name.setText(wardDailyActivity.getActions());
         holder.blog_desc.setText(wardDailyActivity.getDescription());
-        holder.blog_date.setText(wardDailyActivity.getTeacherName());
+//        holder.blog_date.setText(wardDailyActivity.getTeacherName());
         holder.blog_date_new.setText(wardDailyActivity.getDate());
 
 //        holder.blog_image.setImageResource(R.drawable.add_ward);
@@ -123,7 +123,7 @@ public class DailyWardAdapter extends RecyclerView.Adapter<DailyWardAdapter.Dail
 
         public DailyWardViewHolder(View itemView) {
             super(itemView);
-            blog_user_name = (TextView) itemView.findViewById(R.id.blog_user_name);
+//            blog_user_name = (TextView) itemView.findViewById(R.id.blog_user_name);
             blog_date      = (TextView) itemView.findViewById(R.id.blog_date);
             blog_desc      = (TextView) itemView.findViewById(R.id.blog_desc);
             blog_image     = (ImageView) itemView.findViewById(R.id.blog_image);

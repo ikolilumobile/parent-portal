@@ -1,6 +1,7 @@
 package com.ikolilu.ikolilu.portal.ui.wardService.wardOptionInfo;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -25,6 +26,7 @@ import com.ikolilu.ikolilu.portal.adapter.DailyWardAdapter;
 import com.ikolilu.ikolilu.portal.model.WardDailyActivity;
 import com.ikolilu.ikolilu.portal.network.NetworkUtils;
 import com.ikolilu.ikolilu.portal.network.networkStorage.GeneralPref;
+import com.ikolilu.ikolilu.portal.ui.DashMenuActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,7 +44,7 @@ public class WardActivitiesFragment extends Fragment {
 
     RecyclerView recyclerView;
 
-    String output;
+    String output = "";
     ProgressDialog pd = null;
 
     public WardActivitiesFragment() {
@@ -56,6 +58,7 @@ public class WardActivitiesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_ward_activities, container, false);
 
         wardDailyActivities = new ArrayList<>();
+        wardDailyActivities.clear();
 
         recyclerView = (RecyclerView) view.findViewById(R.id.ward_act_recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -74,58 +77,66 @@ public class WardActivitiesFragment extends Fragment {
             pd.setMessage("Preparing ward activities ... Please wait");
             pd.show();
 
-            StringRequest req = new StringRequest(Request.Method.GET, GET_WARD_URL,
-                    new Response.Listener<String>() {
+            try {
+                StringRequest req = new StringRequest(Request.Method.GET, GET_WARD_URL,
+                        new Response.Listener<String>() {
 
-                        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-                        @Override
-                        public void onResponse(String response) {
+                            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+                            @Override
+                            public void onResponse(String response) {
 
-                            try {
-                                JSONArray jsonArray = new JSONArray(response);
+                                try {
+                                    JSONArray jsonArray = new JSONArray(response);
 
-                                pd.hide();
+                                    pd.hide();
 
-                                if (jsonArray.length() == 0 || jsonArray.length() < 1) {
-                                    recyclerView.setBackgroundResource(R.drawable.emptylistbg);
-                                }
+                                    if (jsonArray.length() == 0 || jsonArray.length() < 1) {
+                                        recyclerView.setBackgroundResource(R.drawable.emptylistbg);
+                                    }
 
-                                for (int i = 0; i < jsonArray.length(); i++) {
-                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    for (int i = 0; i < jsonArray.length(); i++) {
+                                        JSONObject object = jsonArray.getJSONObject(i);
 
-                                    WardDailyActivity wardDailyActivity = new WardDailyActivity(
-                                            i,
-                                            object.getString("sz_studentname"),
-                                            object.getString("sz_subject"),
-                                            object.getString("sz_comments"),
-                                            object.getString("sz_schoolid") + "/" + object.getString("sz_image"),
-                                            object.getString("sz_date")
-                                    );
-                                    wardDailyActivities.add(wardDailyActivity);
-                                }
-                                if (wardDailyActivities.size() == 0) {
-                                    recyclerView.setBackgroundResource(R.drawable.emptylistbg);
-                                }
-                                if (!wardDailyActivities.isEmpty()) {
+                                        WardDailyActivity wardDailyActivity = new WardDailyActivity(
+                                                i,
+                                                object.getString("sz_studentname"),
+                                                object.getString("sz_subject"),
+                                                object.getString("sz_comments"),
+                                                object.getString("sz_schoolid") + "/" + object.getString("sz_image"),
+                                                object.getString("sz_date")
+                                        );
+                                        wardDailyActivities.add(wardDailyActivity);
+                                    }
+                                    if (wardDailyActivities.size() == 0) {
+                                        recyclerView.setBackgroundResource(R.drawable.emptylistbg);
+                                    }
+//                                if (!wardDailyActivities.isEmpty()) {
                                     adapter = new DailyWardAdapter(getContext(), wardDailyActivities);
                                     recyclerView.setAdapter(adapter);
+//                                }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    pd.hide();
+                                    recyclerView.setBackgroundResource(R.drawable.empty_notice);
                                 }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                pd.hide();
-                                recyclerView.setBackgroundResource(R.drawable.empty_notice);
                             }
-                        }
-                    }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    pd.hide();
-                    recyclerView.setBackgroundResource(R.drawable.emptylistbg);
-                }
-            });
-            req.setRetryPolicy(new DefaultRetryPolicy(4000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            Volley.newRequestQueue(getContext()).add(req);
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        pd.hide();
+                        recyclerView.setBackgroundResource(R.drawable.emptylistbg);
+                    }
+                });
+                req.setRetryPolicy(new DefaultRetryPolicy(4000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+                Volley.newRequestQueue(getContext()).add(req);
+            }catch (Exception e) {
+                e.printStackTrace();
+//                Intent intent = new Intent(getContext(), DashMenuActivity.class);
+//                startActivity(intent);
+            }
+
+
 
         }else{
             recyclerView.setBackgroundResource(R.drawable.emptylistbg);
